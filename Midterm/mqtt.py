@@ -220,8 +220,8 @@ class mqttAIO:
     def __init__(self):
         # Client: Username -> Adafruit IO Username, Password -> Adafruit IO Key
         self.user = "Eddyzzz"
-        # REMOVE THIS IN YOUR UPLOAD
-        key  = 'aio_WGEh75E7Zmv9fX57BqXqKyd3Wc1C'
+        
+        key  = ''
 
         url = "io.adafruit.com"
 

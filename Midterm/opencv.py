@@ -68,7 +68,7 @@ else:
 import requests
 import json
 
-airtable_token = 'pataxw7zB3sqq4fr9.0029b03c6f2ad42be12afe43c9f354c0e63620819d2049880fbfa968f120d589'
+airtable_token = ''
 
 fields = []
 

@@ -1,0 +1,21 @@
+The main file on the sensor board is sensor.py, it uses the following libraries:
+
+- thermistor.py
+  calculates and converts the temperature based on a Thermistor Temperature Sensor
+
+- mqtt.py
+  initialize connection to Adafruit dashboard through MQTT
+
+The main file on the display board is display.py, it uses its own firmware, which
+includes libraries:
+
+- gc9a01
+  display functions such as writing texts, filling the diaplay with color, etc.
+
+- multiple fonts
+
+Note that since the sensor board and display board run on different firmwares, and 
+the display firmware does not have mqtt or BLE, I could not let the two boards 
+talk remotely. So I made a compromise to wire them up and use UART to transmit data.
+
+

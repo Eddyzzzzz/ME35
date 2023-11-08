@@ -1,14 +1,10 @@
 # Import Libraries----------------------------------------------
-from machine import ADC
+from machine import ADC, Pin, UART
 import thermistor
 import mqtt
 import network
-import machine
 import struct, time
 import requests
-import utime
-import time
-from machine import Pin, UART
 
 # Wifi Connection & Adafruit Dashboard Connection --------------
 #ssid = 'tufts_eecs'

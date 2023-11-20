@@ -71,7 +71,7 @@ try:
 
         # Initialize variables for the contour with the largest area
         max_contour = None
-        max_area = 0
+        max_area = 0 
 
         # Iterate through contours
         for c in cnts:

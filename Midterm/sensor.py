@@ -1,10 +1,14 @@
 # Import Libraries----------------------------------------------
-from machine import ADC, Pin, UART
+from machine import ADC
 import thermistor
 import mqtt
 import network
+import machine
 import struct, time
 import requests
+import utime
+import time
+from machine import Pin, UART
 
 # Wifi Connection & Adafruit Dashboard Connection --------------
 #ssid = 'tufts_eecs'
@@ -29,7 +33,7 @@ mqttaio = mqtt.mqttAIO() # Adafruit Dashboard
 adcpin = 27
 sensor = ADC(adcpin) # Sensor
 
-count = 300 # Timer for sending to dashboard
+count = 200 # Timer for sending to dashboard
     
 def whenCalled(topic, msg):
     print((topic.decode(), msg.decode()))
@@ -69,7 +73,7 @@ while True:
         #print(airtable_color)
     
     # Send Dashboard
-    if count == 300:
+    if count == 200:
         mqttaio.send_temp(round(TempC * 1.8 + 32, 1), round(TempC, 1))
         count = 0;
         

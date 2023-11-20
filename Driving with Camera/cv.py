@@ -64,7 +64,7 @@ try:
         # Your image processing code here (modify as needed)
         cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         b, g, r = cv2.split(cv2_image)
-        green = cv2.subtract(g, r)
+        green = cv2.subtract(g, r) 
         blurred = cv2.GaussianBlur(green, (5, 5), 0)
         thresh = cv2.threshold(blurred, 75, 255, cv2.THRESH_BINARY)[1]
         cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[0]
